@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char s[101];
+    char ch_char;
+    
+    scanf("%s %c", s, &ch_char);
+    
+    int count = 0;
+    for (int i = 0; i < strlen(s); i++) {
+        if (s[i] == ch_char) {
+            count++;
+        }
+    }
+    
+    for (int i = 0; i < count; i++) {
+        printf("%c", ch_char);
+        if (ch_char == 'z') {
+            ch_char = 'a';
+        } else {
+            ch_char++;
+        }
+    }
+    printf("\n");
+    
+    return 0;
+}
